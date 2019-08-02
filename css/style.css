@@ -1,0 +1,173 @@
+/* --- Base Element Styles ---*/
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size:2em;
+  margin-top: -19px;
+  position: relative;
+  top: 50px;
+}
+
+h1, h2, legend {
+  letter-spacing: 0.04em;
+  color: #031223;
+  font-family: 'Raleway', sans-serif;
+}
+
+h2, legend {
+  font-size: 21px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.8em;
+  letter-spacing: 0.08em;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+}
+
+body {
+  color: #333;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+p, .contact span {
+  font-size: 17px;
+  letter-spacing: 0.06em;
+  line-height: 25px;
+}
+
+/* --- Layout containers --- */
+
+body {
+  width: 100%;
+  background: url('../images/offices.jpg') no-repeat center center;
+  background-position: cover;
+}
+
+.wrapper {
+  display: block;
+  margin: 0 auto;
+}
+
+/* --- HEADER --- */
+
+.top-bar {
+  background-color: #031223;
+  height: 60px;
+  width: 100%;
+}
+
+header {
+  text-align: center;
+  width: 90%;
+  border-bottom: 12px double #031223;
+}
+
+.signup {
+  padding: 40px 50px;
+}
+
+/* --- Forms --- */
+
+form {
+  padding: 40px 20px;
+}
+
+legend {
+  margin-bottom: 20px;
+}
+
+fieldset {
+  border: none;
+}
+
+.item {
+  margin: 15px 0px;
+  width: 100%;
+  height: 40px;
+}
+
+.item[placeholder=required] {
+  text-align: right;
+  padding-right: 10px;
+  font-style: italic;
+}
+
+input.item {
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  background: #f0f0f0;
+}
+
+input[type=text]:focus, .item:focus {
+   background-color: #ffffff;
+   outline: none;
+   border: 3px solid #49B7FF;
+   -ms-transition: 0.35s ease-in-out;
+   transition: 0.35s ease-in-out;
+}
+
+label[for=zip] {
+  width: 100%;
+}
+
+/* --- End Forms --- */
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* --- FOOTER --- */
+
+.contact h2 {
+  padding: 10px;
+}
+
+.contact {
+  padding: 20px 15px 40px;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.bottom-footer {
+  border-top: 1px groove #8AD1F4;
+  margin: 0px 20px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.bottom-name {
+  font-size: 1em;
+}
+
+.right {
+  float: right;
+}
+
+.back-to-top {
+  padding: 18px 0px;
+  color: #144055;
+}
+
+.footer-nav {
+  display: none;
+}
+
+/* --- RESPONSIVES --- */
+
+@media screen and (min-width: 760px) {
+
+}
