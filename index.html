@@ -12,12 +12,14 @@
   <div class="top-bar"></div>
 
   <header class="wrapper">
-        <h1>THE CODE REVIEW</h1>
       <div class="signup">
+        <h1>THE CODE REVIEW</h1>
         <h2>Signup for our newsletter</h2>
         <p>Get the latest news on how your code is doing right in your inbox</p>
       </div>
   </header>
+
+  <div class="white-space"></div>
 
   <main class="wrapper">
 
@@ -91,41 +93,41 @@
           <label class="item" for="zip">Zip Code</label>
           <input class="item" type="text" id="zip" name="user_zip">
       </fieldset>
-
-      <fieldset>
+    <div class="white-space"></div>
+      <fieldset class="newsletter">
         <legend>Newsletter</legend>
-        <label class="item for="newsletter">Select the newsletter you would like to receive</label>
-        <input class="item" type="checkbox" id="html" value="html" name="user_newsletter"><label>
-        <input class="item" type="checkbox" id="css" value="css" name="user_newsletter"><label>
-        <input class="item" type="checkbox" id="javascript" value="javascript" name="user_newsletter"><label>
-      </fieldset>
+        <label>Select the newsletter you would like to receive</label><br>
+        <br>
+        <label class="cb_container" for="html">HTML
+          <input type="checkbox" id="html" value="news_html" name="user_newsletter" checked="checked">
+          <span class="checkmark"> </span>
+        </label>
+        <label class="cb_container" for="css">CSS
+          <input type="checkbox" id="css" value="news_css" name="user_newsletter" checked="checked">
+          <span class="checkmark"> </span>
+        </label>
+        <label class="cb_container" for="javascript">Javascript
+          <input type="checkbox" id="javascript" value="news_javascript" name="user_newsletter" checked="checked">
+          <span class="checkmark"> </span>
+        </label>
+
+    <div class="white-space"></div>
+        <label>Newsletter format</label>
+        <div class="radio_container">
+           <input type="radio" id="html_f" value="format_html" name="user_format">
+           <label for="html_f">HTML</label>
+        </div>
+        <div class="radio_container">
+           <input type="radio" id="css_f" value="format_css" name="user_format">
+           <label for="css_f">CSS</label>
+        </div>
 
     </form>
 
     </main>
 
    <footer class="footer-container">
-     <div id="contact" class="contact">
-       <h2>CONTACT</h2>
-       <p>If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!</p>
-       <span>Phone</span> <span class="bold">+1 (111)555-1234</span>
-       <br>
-       <br>
-       <span>E-mail</span> <span class="bold">email@yoursite.com</span>
-     </div>
-     <div class="bottom-footer">
-       <p class="bottom-name left bold">Annelies Arbouw</p>
-       <nav>
-         <ul class="footer-nav nav">
-           <li><a href="index.html">HOME</a></li>
-           <li><a href="#portfolio">PORTFOLIO</a></li>
-           <li><a href="#skills">SKILLS</a></li>
-           <li><a href="#contact">CONTACT</a></li>
-         </ul>
-       </nav>
-       <a class="back-to-top right" href="#top">BACK TO TOP</a>
-     </div>
-    </footer>
+   </footer>
 
   </body>
  </html>

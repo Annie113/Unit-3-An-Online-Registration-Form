@@ -6,21 +6,26 @@
 
 h1 {
   font-size:2em;
-  margin-top: -19px;
-  position: relative;
-  top: 50px;
+  margin-top: 20px;
+  color: red;
 }
 
 h1, h2, legend {
   letter-spacing: 0.04em;
-  color: #031223;
   font-family: 'Raleway', sans-serif;
 }
 
 h2, legend {
   font-size: 21px;
   font-weight: 700;
-  margin-top: 20px;
+}
+
+h2 {
+  color: #fff;
+}
+
+legend {
+  color: red;
 }
 
 a {
@@ -33,13 +38,16 @@ a {
 }
 
 body {
-  color: #333;
+  color: #BDBDBF;
+  font-weight: 500;
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
+  background-position: cover;
+  background: url('../images/dark-offices.jpg') no-repeat center center;
 }
 
-p, .contact span {
+p {
   font-size: 17px;
   letter-spacing: 0.06em;
   line-height: 25px;
@@ -49,7 +57,6 @@ p, .contact span {
 
 body {
   width: 100%;
-  background: url('../images/offices.jpg') no-repeat center center;
   background-position: cover;
 }
 
@@ -61,25 +68,29 @@ body {
 /* --- HEADER --- */
 
 .top-bar {
-  background-color: #031223;
-  height: 60px;
+  background-color: #BDBDBF;
+  height: 80px;
   width: 100%;
+  background-position: cover;
+  background: url('../images/crimson-red.jpg') no-repeat bottom right;
 }
 
 header {
   text-align: center;
-  width: 90%;
-  border-bottom: 12px double #031223;
 }
 
 .signup {
   padding: 40px 50px;
 }
 
-/* --- Forms --- */
+.white-space {
+  height: 30px;
+}
+
+/* --- Contact Information Form --- */
 
 form {
-  padding: 40px 20px;
+  padding: 20px;
 }
 
 legend {
@@ -111,13 +122,102 @@ input.item {
 input[type=text]:focus, .item:focus {
    background-color: #ffffff;
    outline: none;
-   border: 3px solid #49B7FF;
+   border-bottom: 3px solid red;
    -ms-transition: 0.35s ease-in-out;
    transition: 0.35s ease-in-out;
 }
 
-label[for=zip] {
-  width: 100%;
+/* --- Newsletter --- */
+
+.newsletter input {
+   height: 10px;
+   display: inline-block;
+}
+
+input[type="checkbox"]:checked + label {
+  color: red;
+}
+
+.cb_container, .radio_container {
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.cb_container {
+   padding-left: 30px;
+}
+
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: black;
+    border: 1px solid #555;
+}
+
+.cb_container input:checked ~ .checkmark {
+    background-color: black;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: block;
+    visibility: hidden;
+}
+
+.cb_container input:checked ~ .checkmark:after {
+    visibility: visible;
+}
+
+.cb_container .checkmark:after {
+    left: 4px;
+    bottom: 5px;
+    width: 5px;
+    height: 8px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border: solid white;
+    border-width: 0 2px 2px 0;
+}
+
+.radio_container input[type='radio'] {
+   display: none;
+}
+
+.radio_container label:before {
+   content: " ";
+   display: inline-block;
+   position: relative;
+   top: 3.8px;
+   margin-right: 10px;
+   width: 14px;
+   height: 14px;
+   border-radius: 11px;
+   background-color: black;
+   border: 1px solid #555;
+}
+
+.radio_container input[type=radio]:checked + label:after {
+  border-radius: 11px;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  content: " ";
+  display: block;
+  background: #fff;
 }
 
 /* --- End Forms --- */
