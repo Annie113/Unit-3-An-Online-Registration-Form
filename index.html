@@ -2,42 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unit 2 Responsive Layout</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,700%7CRaleway:400,400i,500,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="top-bar"></div>
-
-  <header class="wrapper">
-      <div class="signup">
-        <h1>THE CODE REVIEW</h1>
-        <h2>Signup for our newsletter</h2>
-        <p>Get the latest news on how your code is doing right in your inbox</p>
-      </div>
+  <header>
+    <div class="top-bar"></div>
+    <div class="signup">
+      <h1>THE CODE REVIEW</h1>
+      <h2>Signup for our newsletter</h2>
+      <p>Get the latest news on how your code is doing right in your inbox</p>
+    </div>
   </header>
 
-  <div class="white-space"></div>
-
   <main class="wrapper">
-
     <form>
-      <fieldset>
+      <fieldset class="form">
         <legend>Contact Information</legend>
-        <label class="item" for="name">Full Name</label>
-        <input class="item" type="text" placeholder="required" id="name" name="user_name">
-        <label class="item" for="mail">Email Adress</label>
-        <input class="item" type="email" placeholder="required" id="mail" name="user_email">
-        <label class="item" for="phone">Phone Number</label>
+        <div class="flex-container"
+          <label class="item1" for="name">Full Name</label>
+          <input class="item2" type="text" placeholder="required" id="name" name="user_name">
+        </div>
+        <div class="flex-container"
+          <label class="item1" for="mail">Email Adress</label>
+          <input class="item2" type="email" placeholder="required" id="mail" name="user_email">
+        </div>
+        <label for="phone">Phone Number</label>
         <input class="item" type="tel" id="phone" name="user_phone">
-        <label class="item" for="address">Street Address</label>
+        <label for="address">Street Address</label>
         <input class="item" type="text" id="address" name="user_address">
-        <label class="item" for="city">City</label>
+        <label for="city">City</label>
         <input class="item" type="text" id="city" name="user_city">
-        <label class="item" for="state">State</label>
-          <select class="item" id="state" name="user_state">
+        <label for="state">State</label>
+          <select id="state" name="user_state">
             <option value="alabama">Alabama</option>
             <option value="alaska">Alaska</option>
             <option value="arizona">Arizona</option>
@@ -110,24 +110,33 @@
           <input type="checkbox" id="javascript" value="news_javascript" name="user_newsletter" checked="checked">
           <span class="checkmark"> </span>
         </label>
-
-    <div class="white-space"></div>
-        <label>Newsletter format</label>
+        <br>
+        <label class="news">Newsletter format</label><br>
+        <br>
         <div class="radio_container">
            <input type="radio" id="html_f" value="format_html" name="user_format">
            <label for="html_f">HTML</label>
         </div>
         <div class="radio_container">
-           <input type="radio" id="css_f" value="format_css" name="user_format">
-           <label for="css_f">CSS</label>
-        </div>
-
-    </form>
-
+           <input type="radio" id="plain_f" value="format_plain" name="user_format">
+           <label for="plain_f">Plain text</label>
+        </div><br>
+        <label for="topics">Other topics you'd like to hear about</label><br>
+        <br>
+        <textarea id="topics" name="user_topics" rows="7"></textarea><br>
+        <br>
+        <button type="submit">Sign Up</button>
+      </fieldset>
+     </form><br>
+     <div class="white_space"</div>
     </main>
 
-   <footer class="footer-container">
+   <footer>
+      <div class="inner-footer">
+        <div class="copyright">
+          <small>Copyright The Code Review</small>
+        </div>
+      </div>
    </footer>
-
   </body>
  </html>

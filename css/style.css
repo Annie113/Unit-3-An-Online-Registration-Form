@@ -15,9 +15,9 @@ h1, h2, legend {
   font-family: 'Raleway', sans-serif;
 }
 
-h2, legend {
+h2, legend, button {
   font-size: 21px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h2 {
@@ -39,7 +39,6 @@ a {
 
 body {
   color: #BDBDBF;
-  font-weight: 500;
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
@@ -56,12 +55,15 @@ p {
 /* --- Layout containers --- */
 
 body {
-  width: 100%;
-  background-position: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.wrapper {
-  display: block;
+.wrapper,
+.copyright,
+.cb_container {
+  flex: 1;
   margin: 0 auto;
 }
 
@@ -70,7 +72,6 @@ body {
 .top-bar {
   background-color: #BDBDBF;
   height: 80px;
-  width: 100%;
   background-position: cover;
   background: url('../images/crimson-red.jpg') no-repeat bottom right;
 }
@@ -83,15 +84,7 @@ header {
   padding: 40px 50px;
 }
 
-.white-space {
-  height: 30px;
-}
-
 /* --- Contact Information Form --- */
-
-form {
-  padding: 20px;
-}
 
 legend {
   margin-bottom: 20px;
@@ -101,25 +94,30 @@ fieldset {
   border: none;
 }
 
-.item {
-  margin: 15px 0px;
+input {
   width: 100%;
+  margin: 15px 0px;
   height: 40px;
-}
-
-.item[placeholder=required] {
-  text-align: right;
-  padding-right: 10px;
-  font-style: italic;
-}
-
-input.item {
   border-radius: 5px;
   border: 1px solid #bfbfbf;
   background: #f0f0f0;
 }
 
-input[type=text]:focus, .item:focus {
+.item {
+
+}
+
+.item2[placeholder=required] {
+  text-align: right;
+  padding-right: 10px;
+  font-style: italic;
+}
+
+select {
+  background-color: white;
+}
+
+input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus, textarea:focus, select:focus {
    background-color: #ffffff;
    outline: none;
    border-bottom: 3px solid red;
@@ -127,7 +125,7 @@ input[type=text]:focus, .item:focus {
    transition: 0.35s ease-in-out;
 }
 
-/* --- Newsletter --- */
+/* --- Newsletter Form --- */
 
 .newsletter input {
    height: 10px;
@@ -201,8 +199,8 @@ input[type=checkbox] {
    position: relative;
    top: 3.8px;
    margin-right: 10px;
-   width: 14px;
-   height: 14px;
+   width: 16px;
+   height: 16px;
    border-radius: 11px;
    background-color: black;
    border: 1px solid #555;
@@ -213,61 +211,70 @@ input[type=checkbox] {
   width: 5px;
   height: 5px;
   position: absolute;
-  top: 9px;
-  left: 5px;
+  top: 10.45px;
+  left: 6.499px;
   content: " ";
   display: block;
   background: #fff;
 }
 
-/* --- End Forms --- */
+textarea, button {
+  width: 100%;
+  border-radius: 5px;
+}
 
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+button:hover {
+  background-color: #eee;
+  color: black;
+}
+
+button {
+  background-color: red;
+  height: 50px;
+  color: #fff;
+  border: none;
+}
+
+.white_space {
+  height: 80px;
 }
 
 /* --- FOOTER --- */
 
-.contact h2 {
-  padding: 10px;
+.inner-footer {
+  display: flex;
+  align-items: center;
+  background-color: #555;
+  height: 75px;
 }
 
-.contact {
-  padding: 20px 15px 40px;
-  margin: 0 auto;
-  max-width: 500px;
-}
-
-.bottom-footer {
-  border-top: 1px groove #8AD1F4;
-  margin: 0px 20px;
-}
-
-.bold {
-  font-weight: 600;
-}
-
-.bottom-name {
-  font-size: 1em;
-}
-
-.right {
-  float: right;
-}
-
-.back-to-top {
-  padding: 18px 0px;
-  color: #144055;
-}
-
-.footer-nav {
-  display: none;
+.copyright {
+  text-align: center;
 }
 
 /* --- RESPONSIVES --- */
 
 @media screen and (min-width: 760px) {
+  .top-bar {
+    background: url('../images/crimson-red.jpg') no-repeat bottom;
+  }
 
+  .wrapper,
+  .copyright {
+    width: 65%;
+  }
+
+  .flex-container {
+    display: flex;
+  }
+
+  input {
+    margin: 0px;
+  }
+
+  .item2 {
+    width: 60%;
+    align-items: flex-end;
+    margin-left: 20px;
+  }
 }
