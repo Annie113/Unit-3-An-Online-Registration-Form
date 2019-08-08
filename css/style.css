@@ -42,7 +42,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-  background-position: cover;
   background: url('../images/dark-offices.jpg') no-repeat center center;
 }
 
@@ -63,7 +62,6 @@ body {
 .wrapper,
 .copyright,
 .cb_container {
-  flex: 1;
   margin: 0 auto;
 }
 
@@ -72,7 +70,6 @@ body {
 .top-bar {
   background-color: #BDBDBF;
   height: 80px;
-  background-position: cover;
   background: url('../images/crimson-red.jpg') no-repeat bottom right;
 }
 
@@ -81,10 +78,18 @@ header {
 }
 
 .signup {
-  padding: 40px 50px;
+  padding: 25px 60px;
 }
 
 /* --- Contact Information Form --- */
+
+.wrapper, .newsletter {
+  border-top: 1px solid white;
+}
+
+form {
+  margin-top: 40px;
+}
 
 legend {
   margin-bottom: 20px;
@@ -92,29 +97,30 @@ legend {
 
 fieldset {
   border: none;
+  margin: 30px 0px;
 }
 
-input {
+input, select {
   width: 100%;
-  margin: 15px 0px;
+  margin: 12px 0px;
   height: 40px;
   border-radius: 5px;
   border: 1px solid #bfbfbf;
   background: #f0f0f0;
 }
 
-.item {
+.item2 {
+  display: flex;
+}
 
+.item_zip {
+  flex-basis: 50%;
 }
 
 .item2[placeholder=required] {
   text-align: right;
   padding-right: 10px;
   font-style: italic;
-}
-
-select {
-  background-color: white;
 }
 
 input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus, textarea:focus, select:focus {
@@ -127,13 +133,8 @@ input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus, textarea
 
 /* --- Newsletter Form --- */
 
-.newsletter input {
-   height: 10px;
-   display: inline-block;
-}
-
-input[type="checkbox"]:checked + label {
-  color: red;
+.newsletter {
+  padding: 10px 0px;
 }
 
 .cb_container, .radio_container {
@@ -146,6 +147,7 @@ input[type="checkbox"]:checked + label {
 
 .cb_container {
    padding-left: 30px;
+   height: 20px;
 }
 
 input[type=checkbox] {
@@ -185,7 +187,7 @@ input[type=checkbox] {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-    border: solid white;
+    border: 1px solid white;
     border-width: 0 2px 2px 0;
 }
 
@@ -197,7 +199,7 @@ input[type=checkbox] {
    content: " ";
    display: inline-block;
    position: relative;
-   top: 3.8px;
+   top: 3.85px;
    margin-right: 10px;
    width: 16px;
    height: 16px;
@@ -212,7 +214,7 @@ input[type=checkbox] {
   height: 5px;
   position: absolute;
   top: 10.45px;
-  left: 6.499px;
+  left: 6px;
   content: " ";
   display: block;
   background: #fff;
@@ -245,7 +247,7 @@ button {
   display: flex;
   align-items: center;
   background-color: #555;
-  height: 75px;
+  height: 80px;
 }
 
 .copyright {
@@ -268,13 +270,21 @@ button {
     display: flex;
   }
 
-  input {
-    margin: 0px;
+  .item1, .item2 {
+    margin-top: 15px;
+    align-self: center;
+  }
+
+  .item1 {
+    flex-basis: 25%;
   }
 
   .item2 {
-    width: 60%;
-    align-items: flex-end;
+    flex-basis: 75%;
     margin-left: 20px;
+  }
+
+  .item_zip {
+    flex-basis: 30%;
   }
 }

@@ -20,24 +20,31 @@
 
   <main class="wrapper">
     <form>
-      <fieldset class="form">
+      <fieldset>
         <legend>Contact Information</legend>
-        <div class="flex-container"
+        <div class="flex-container">
           <label class="item1" for="name">Full Name</label>
           <input class="item2" type="text" placeholder="required" id="name" name="user_name">
         </div>
-        <div class="flex-container"
-          <label class="item1" for="mail">Email Adress</label>
+        <div class="flex-container">
+          <label class="item1" for="mail">Email Address</label>
           <input class="item2" type="email" placeholder="required" id="mail" name="user_email">
         </div>
-        <label for="phone">Phone Number</label>
-        <input class="item" type="tel" id="phone" name="user_phone">
-        <label for="address">Street Address</label>
-        <input class="item" type="text" id="address" name="user_address">
-        <label for="city">City</label>
-        <input class="item" type="text" id="city" name="user_city">
-        <label for="state">State</label>
-          <select id="state" name="user_state">
+        <div class="flex-container">
+          <label class="item1" for="phone">Phone Number</label>
+          <input class="item2" type="tel" id="phone" name="user_phone">
+        </div>
+        <div class="flex-container">
+          <label class="item1" for="address">Street Address</label>
+          <input class="item2" type="text" id="address" name="user_address">
+        </div>
+        <div class="flex-container">
+          <label class="item1" for="city">City</label>
+          <input class="item2" type="text" id="city" name="user_city">
+        </div>
+        <div class="flex-container">
+          <label class="item1" for="state">State</label>
+          <select class="item2" id="state" name="user_state">
             <option value="alabama">Alabama</option>
             <option value="alaska">Alaska</option>
             <option value="arizona">Arizona</option>
@@ -90,11 +97,17 @@
             <option value="wisconsin">Wisconsin"</option>
             <option value="wyoming">Wyoming"</option>
           </select>
-          <label class="item" for="zip">Zip Code</label>
-          <input class="item" type="text" id="zip" name="user_zip">
+        </div>
+        <div class="flex-container">
+          <label class="item1" for="zip">Zip Code</label>
+          <div class="item2">
+            <input class="item_zip" type="text" id="zip" name="user_zip">
+          </div>
+        </div>
       </fieldset>
-    <div class="white-space"></div>
-      <fieldset class="newsletter">
+
+    <div class="newsletter">
+      <fieldset>
         <legend>Newsletter</legend>
         <label>Select the newsletter you would like to receive</label><br>
         <br>
@@ -126,9 +139,10 @@
         <textarea id="topics" name="user_topics" rows="7"></textarea><br>
         <br>
         <button type="submit">Sign Up</button>
-      </fieldset>
+       </fieldset>
+      </div>
      </form><br>
-     <div class="white_space"</div>
+     <div class="white_space"></div>
     </main>
 
    <footer>
