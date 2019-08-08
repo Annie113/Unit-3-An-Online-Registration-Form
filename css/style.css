@@ -100,9 +100,16 @@ fieldset {
   margin: 30px 0px;
 }
 
+.item2[placeholder=required]::placeholder {
+  text-align: right;
+  padding-right: 10px;
+  font-style: italic;
+}
+
 input, select {
   width: 100%;
   margin: 12px 0px;
+  padding-left: 10px;
   height: 40px;
   border-radius: 5px;
   border: 1px solid #bfbfbf;
@@ -115,12 +122,6 @@ input, select {
 
 .item_zip {
   flex-basis: 50%;
-}
-
-.item2[placeholder=required] {
-  text-align: right;
-  padding-right: 10px;
-  font-style: italic;
 }
 
 input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus, textarea:focus, select:focus {
